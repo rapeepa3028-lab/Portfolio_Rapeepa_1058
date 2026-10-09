@@ -1,0 +1,286 @@
+/* ---------- Base / Reset ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #FFF6EC;
+    color: #3B2412;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    width: 80%;
+    height: auto;
+    max-width: 90%;
+    margin: 12px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0.6em 0;
+}
+
+/* ---------- Grid Layout ---------- */
+.grid-container {
+    display: grid;
+    grid-template-columns: 20% auto 30%;
+    gap: 8px;
+    width: 96%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #C1440E;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.grid-container > div {
+    background-color: #FFFDF7;
+    padding: 5%;
+    font-size: 1rem;
+}
+
+/* ---------- Header ---------- */
+#header {
+    grid-column: 1 / span 3;
+    text-align: center;
+    background: linear-gradient(135deg, #C1440E, #E8712C);
+    color: #FFF6EC;
+    padding: 4% 2%;
+}
+
+#header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+/* ---------- Menu ---------- */
+#menu {
+    grid-column: 1 / span 1;
+    background-color: #FFE8D1;
+}
+
+#menu h2 {
+    color: #C1440E;
+    border-bottom: 2px solid #E8712C;
+    padding-bottom: 8px;
+}
+
+#menu a {
+    text-decoration: none;
+}
+
+#menu h3 {
+    background-color: #FFFFFF;
+    color: #3B2412;
+    padding: 10px 8px;
+    border-radius: 8px;
+    margin: 10px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#menu h3:hover {
+    background-color: #E8712C;
+    color: #FFFFFF;
+    transform: translateX(4px);
+}
+
+/* ---------- Main content ---------- */
+#main {
+    grid-column: 2 / span 1;
+    background-color: #FFFDF7;
+}
+
+#main h1 {
+    color: #C1440E;
+    font-size: 1.6rem;
+}
+
+/* ---------- Ingredients / Right column ---------- */
+#right {
+    grid-column: 3 / span 1;
+    background-color: #FFF1E3;
+}
+
+#right h1 {
+    color: #C1440E;
+    font-size: 1.4rem;
+}
+
+#right h2 {
+    color: #3B2412;
+    font-size: 1.05rem;
+    text-align: left;
+    margin-top: 1.2em;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #F0D9C2;
+    border-left: 5px solid #E8712C;
+    border-radius: 10px;
+    display: block;
+    list-style: none;
+    padding: 10px 16px;
+    margin: 6px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    font-size: 0.95rem;
+}
+
+/* ---------- Footer ---------- */
+#footer {
+    grid-column: 1 / span 3;
+    text-align: center;
+    background-color: #3B2412;
+    color: #FFF6EC;
+    padding: 3% 2%;
+}
+
+#footer a {
+    color: #F4B400;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Responsive: Tablet ---------- */
+@media only screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 48% 48%;
+        gap: 8px;
+        width: 94%;
+    }
+
+    #header {
+        grid-column: 1 / span 2;
+    }
+    #menu {
+        grid-column: 1 / span 1;
+    }
+    #main {
+        grid-column: 2 / span 1;
+    }
+    #right {
+        grid-column: 1 / span 2;
+    }
+    #footer {
+        grid-column: 1 / span 2;
+    }
+
+    #header h1 {
+        font-size: 1.8rem;
+    }
+
+    img {
+        width: 90%;
+    }
+}
+
+/* ---------- Responsive: Mobile ---------- */
+@media only screen and (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 100%;
+        gap: 8px;
+        width: 92%;
+        border-radius: 10px;
+    }
+
+    #header, #menu, #main, #right, #footer {
+        grid-column: 1 / span 1;
+    }
+
+    #header h1 {
+        font-size: 1.4rem;
+    }
+
+    #main h1, #right h1 {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+/* ---------- JavaScript features ---------- */
+.hint {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #8A6A52;
+    margin: 0;
+}
+
+.card li {
+    cursor: pointer;
+    padding: 2px 0;
+    transition: color 0.2s ease;
+}
+
+.card li:hover {
+    color: #C1440E;
+}
+
+.card li.checked {
+    text-decoration: line-through;
+    color: #A89584;
+}
+
+.card li.checked::before {
+    content: "\2713  ";
+    color: #4C9A3E;
+}
+
+#topBtn {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 16px;
+    background-color: #C1440E;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+#topBtn:hover {
+    background-color: #E8712C;
+}
+
+/* ---------- Back to portfolio ---------- */
+.back-link {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 4px 14px;
+    border: 2px solid #FFF6EC;
+    border-radius: 20px;
+    color: #FFF6EC;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.back-link:hover {
+    background-color: #FFF6EC;
+    color: #C1440E;
+}

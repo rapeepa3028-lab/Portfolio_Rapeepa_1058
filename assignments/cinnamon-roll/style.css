@@ -1,0 +1,283 @@
+/* ---------- Base ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    background-color: #FFF4E6;
+    color: #4A2C17;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- Links (a:link / a:visited / a:hover / a:active) ---------- */
+a:link {
+    color: #B8541A;
+    font-weight: 600;
+}
+
+a:visited {
+    color: #805AD5;
+}
+
+a:hover {
+    color: #E53E3E;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #DD6B20;
+}
+
+/* ---------- Header ---------- */
+.page-header {
+    background: linear-gradient(135deg, #8B4A1F, #C8742B);
+    color: #FFF8F0;
+    text-align: center;
+    padding: 24px 5% 28px;
+}
+
+.page-header h1 {
+    margin: 14px 0 0;
+    font-size: 2rem;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.back-link:link,
+.back-link:visited {
+    display: inline-block;
+    color: #FFF8F0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border: 2px solid #FFF8F0;
+    border-radius: 20px;
+    padding: 4px 14px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #FFF8F0;
+    color: #8B4A1F;
+    text-decoration: none;
+}
+
+/* ---------- Main card (box model: margin, padding, border) ---------- */
+.card-layout {
+    width: 90%;
+    max-width: 900px;
+    margin: 24px auto;
+    padding: 30px;
+    background-color: #FFFDF9;
+    border: 2px solid #F0D9BF;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    text-align: center;
+    color: #8B4A1F;
+    border-bottom: 3px solid #C8742B;
+    padding-bottom: 8px;
+    margin: 30px 0 16px;
+}
+
+/* ---------- Images ---------- */
+.hero-img,
+.section-img,
+.steps-img {
+    margin: 0 auto 16px;
+    border: 5px solid #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.hero-img {
+    width: 60%;
+}
+
+.section-img {
+    width: 45%;
+}
+
+.steps-img {
+    width: 30%;
+}
+
+/* ---------- Flex containers (display: flex) ---------- */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
+    row-gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- Ingredients ---------- */
+.ingredients li {
+    width: 31%;
+    background-color: #FFFFFF;
+    border: 2px solid #F0D9BF;
+    border-left: 6px solid #C8742B;
+    border-radius: 12px;
+    padding: 12px 14px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.ingredients li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(200, 116, 43, 0.25);
+}
+
+.ingredients .note {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.85rem;
+    color: #7A5A44;
+    text-align: left;
+}
+
+/* ---------- Steps ---------- */
+.hint {
+    text-align: center;
+    margin: 0;
+    font-size: 0.9rem;
+    color: #7A5A44;
+}
+
+.progress {
+    text-align: center;
+    margin: 6px 0 14px;
+    font-weight: 600;
+    color: #B8541A;
+}
+
+.step {
+    margin: 14px 0;
+    padding: 14px 18px;
+    background-color: #FFFFFF;
+    border: 2px solid #F0D9BF;
+    border-left: 6px solid #C8742B;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.step h3 {
+    margin: 0 0 6px;
+    color: #8B4A1F;
+}
+
+.step p {
+    margin: 0;
+}
+
+.step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(200, 116, 43, 0.25);
+}
+
+.step:active {
+    transform: translateY(1px) scale(0.99);
+}
+
+.step.done {
+    background-color: #EAF6E7;
+    border-left-color: #4C9A3E;
+}
+
+.step.done h3::after {
+    content: " \2713";
+    color: #4C9A3E;
+}
+
+/* ---------- Gallery ---------- */
+.gallery img {
+    width: 31%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.gallery img:hover {
+    transform: scale(1.1) rotate(3deg);
+}
+
+/* ---------- Source ---------- */
+.source {
+    margin-top: 30px;
+    padding-top: 16px;
+    border-top: 2px dashed #E3C7A5;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* ---------- Responsive: Tablet ---------- */
+@media only screen and (max-width: 768px) {
+    .page-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .card-layout {
+        width: 94%;
+        padding: 20px;
+    }
+
+    .hero-img {
+        width: 80%;
+    }
+
+    .section-img {
+        width: 70%;
+    }
+
+    .steps-img {
+        width: 55%;
+    }
+
+    .ingredients li {
+        width: 48%;
+    }
+
+    .gallery img {
+        width: 48%;
+    }
+}
+
+/* ---------- Responsive: Mobile ---------- */
+@media only screen and (max-width: 480px) {
+    .page-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .card-layout {
+        width: 96%;
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    .hero-img,
+    .section-img,
+    .steps-img {
+        width: 100%;
+    }
+
+    .ingredients li {
+        width: 100%;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+}

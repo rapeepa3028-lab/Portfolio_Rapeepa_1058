@@ -1,0 +1,124 @@
+/* =============================================================================
+   Assignment 6: Register & Login - ใช้ CSS ไฟล์เดียวร่วมกันทั้ง 2 หน้า
+   ============================================================================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+fieldset {
+    background: #ffffff;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    padding: 24px 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    width: 100%;
+}
+
+/* หน้า Register กว้างกว่าหน้า Login */
+#myRegister fieldset {
+    max-width: 380px;
+}
+
+#myLogin fieldset {
+    max-width: 260px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 6px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+    padding: 6px 8px;
+    margin: 4px 0 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#errormsg {
+    color: #d92d20;
+    font-weight: bold;
+    display: block;
+    margin: 4px 0;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 6px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+#registerBtn,
+#loginBtn {
+    background: #2563eb;
+    color: white;
+}
+
+#resetBtn,
+#clearBtn {
+    background: #e5e7eb;
+}
+
+#registerBtn:hover,
+#loginBtn:hover {
+    background: #1d4ed8;
+}
+
+.switch-link {
+    margin: 14px 0 0;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.switch-link a {
+    color: #2563eb;
+}
+
+/* ---------- Back to portfolio (มุมซ้ายบน) ---------- */
+.back-link {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    padding: 6px 14px;
+    background: #ffffff;
+    border: 1px solid #d0d5dd;
+    border-radius: 20px;
+    color: #2563eb;
+    font-size: 0.9rem;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.back-link:hover {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        padding-top: 70px;
+    }
+}

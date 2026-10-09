@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Rapeepa Janwongduan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+    <!-- ===== Navigation ===== -->
+    <header class="navbar">
+        <a href="index.html" class="logo">Rapeepa<span>.</span></a>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">&#9776;</button>
+        <nav id="navLinks">
+            <a href="index.html#about">About</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="index.html#works">Works</a>
+            <a href="project.html" class="active">Projects</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- ===== Page header ===== -->
+    <section class="page-header">
+        <p class="eyebrow">My Projects</p>
+        <h1>โปรเจกต์ของฉัน</h1>
+        <p>โปรเจกต์ที่ทำร่วมกับเพื่อนในรายวิชาต่าง ๆ ที่คณะเทคโนโลยีมีเดีย มจธ.</p>
+    </section>
+
+    <main>
+        <!-- ===== Project 1 ===== -->
+        <article class="project-card">
+            <div class="project-label">
+                <span class="project-no">01</span>
+            </div>
+            <div class="project-body">
+                <h2>Digit Span Backward กับความคุ้นเคยของสัญลักษณ์ตัวเลขไทย</h2>
+                <p class="project-sub">การศึกษา Working Memory ด้วยแบบทดสอบ Digit Span Backward โดยใช้เลขไทย</p>
+                <p>
+                    โครงการวิจัยแบบกลุ่ม ทดลองใช้เลขไทย (๐ ๑ ๒ ๓ ๔) เป็นสัญลักษณ์ในแบบทดสอบ Digit Span Backward
+                    กับกลุ่มตัวอย่างคนไทย
+                </p>
+
+                <dl class="project-info">
+                    <div>
+                        <dt>รายวิชา</dt>
+                        <dd>MMI 460 Special Topic II</dd>
+                    </div>
+                    <div>
+                        <dt>สมาชิก</dt>
+                        <dd>ศิรภัสสร, ธัญนุช, รพีภาส์</dd>
+                    </div>
+                </dl>
+            </div>
+        </article>
+
+        <!-- ===== Project 2 ===== -->
+        <article class="project-card">
+            <div class="project-label">
+                <span class="project-no">02</span>
+            </div>
+            <div class="project-body">
+                <h2>Indoor Object Finder for Visually Impaired</h2>
+                <p class="project-sub">ผู้ช่วยค้นหาสิ่งของภายในบ้านสำหรับผู้พิการทางสายตา</p>
+                <p>
+                    อุปกรณ์ที่ช่วยให้ผู้พิการทางสายตาค้นหาสิ่งของภายในบ้านด้วยการสั่งงานด้วยเสียง
+                </p>
+
+                <h3 class="project-heading">ปัญหา</h3>
+                <p>
+                    ผู้พิการทางสายตาสามารถจดจำตำแหน่งสิ่งของภายในบ้านได้ แต่เมื่อวางของผิดที่ มีคนอื่นย้ายของ
+                    ลืมตำแหน่งของสิ่งของ หรือสิ่งของมีขนาดเล็ก การค้นหาอาจใช้เวลานาน และอาจต้องขอความช่วยเหลือจากผู้อื่น
+                </p>
+
+                <h3 class="project-heading">การทำงาน</h3>
+                <ol class="step-list">
+                    <li>ยกมือเพื่อเริ่มใช้งาน กล้องตรวจจับท่าทางยกมือ (YOLO Pose) เพื่อเริ่มรับคำสั่งเสียง</li>
+                    <li>พูดคำสั่งเสียง เช่น "กุญแจอยู่ไหน?" ไมโครโฟนรับเสียงและแปลงเป็นข้อความภาษาไทย</li>
+                    <li>ตรวจจับสิ่งของจากหลายกล้อง YOLO ตรวจหาสิ่งของจากภาพกล้องทั้ง 3 ตัวแล้วรวมผลลัพธ์</li>
+                    <li>ประมวลผลตำแหน่ง แปลงตำแหน่งเป็นโซนและหาความสัมพันธ์กับสิ่งรอบข้าง เช่น "อยู่บนโต๊ะ"</li>
+                    <li>แจ้งผลด้วยเสียง ลำโพงบอกตำแหน่งกลับไปยังผู้ใช้ เช่น "กุญแจอยู่ด้านขวาของคุณ บนโต๊ะ"</li>
+                </ol>
+
+                <figure class="project-figure">
+                    <img src="images/indoor-object-finder.jpg" alt="ภาพอุปกรณ์ การติดตั้งกล้อง 3 ตัว และขั้นตอนการใช้งานของ Indoor Object Finder">
+                </figure>
+
+                <dl class="project-info">
+                    <div>
+                        <dt>รายวิชา</dt>
+                        <dd>MMI 321 Integrated Medical Product Design and Development</dd>
+                    </div>
+                    <div>
+                        <dt>สถานะ</dt>
+                        <dd>กำลังพัฒนา (โปรเจกต์ภาคการศึกษานี้)</dd>
+                    </div>
+                    <div>
+                        <dt>บทบาทของฉัน</dt>
+                        <dd>Prototype / Software / Producer</dd>
+                    </div>
+                    <div>
+                        <dt>สมาชิก</dt>
+                        <dd>ศิรภัสสร (User Research / Hardware / Data Analyst),
+                            จารุวรรณ (Director / Software / Performance Analyst),
+                            รพีภาส์ (Prototype / Software / Producer)</dd>
+                    </div>
+                </dl>
+            </div>
+        </article>
+
+        <div class="back-home">
+            <a href="index.html" class="btn btn-outline">&larr; กลับหน้า Portfolio</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="copyright">&copy; <span id="year">2026</span> Rapeepa Janwongduan</p>
+    </footer>
+
+</body>
+</html>
